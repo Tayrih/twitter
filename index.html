@@ -1,66 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Twitter</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <header>
 
-    </header>
-    <main>
-      <section id="section1">
-        <div class="info">
-          <div class="perfil">
-            <img src="assets/images" alt="Foto de perfil">
-          </div>
-          <div class="">
-            <p>Cintia Tahirih</p>
-            <p>@Tahirih</p>
-          </div>
-          <div>
-            <p>Twets</p>
-            <p>0</p> <!--contador de tweets-->
-          </div>
-          <div>
-            <p>Siguiendo</p>
-            <p>19</p>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <title>Twitter</title>
+  <link rel="stylesheet" type="text/css" href="assets/icons/icomoon/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="assets/icons/flaticon/font/flaticon.css" media="screen">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="subcontainer left">
+        <div>
+          <span class="flaticon-shape"></span>
+          <span class="small">Inicio</span>
         </div>
         <div>
-          <div>
-            <p>Tendencias para ti <span>.cambiar</span></p>
-          </div>
-          <div>
-            <p>#tendencia</p>
-            <p>#texto</p>
-            <p>#parrafo1</p>
-            <p>#tendencia</p>
-            <p>#texto</p>
-            <p>#parrafo1</p>
-          </div>
+          <span class="flaticon-music"></span>
+          <span class="small">Notificaciones</span>
         </div>
-      </section>
-      <section id="section2">
-        <div id="tweet" class="container">
-          <textarea id="twiteear">
+        <div>
+          <span class="icon-envelope"></span>
+          <span>Mensajes</span>
+        </div>
+      </div>
+      <div class="subcontainer middle">
+        <span class="icon-twitter blue"></span>
+      </div>
+      <div class="subcontainer right">
+        <div>
+          <span class="flaticon-feather-in-a-square"></span>
+          <span>Twittear</span>
+        </div>
+        <div class="image-header">
+          <img src="assets/images/tahirihprofile.jpg" alt="profile picture">
+        </div>
+        <div>
+          <input class="buscar" type="text" placeholder="Buscar en Twitter">
+          <span class="icon-search"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="section1">
+      <div class="info">
+        <div class="perfil">
+          <img src="assets/images" alt="Foto de perfil">
+        </div>
+        <div class="">
+          <p>Cintia Tahirih</p>
+          <p>@Tahirih</p>
+        </div>
+        <div>
+          <p>Twets</p>
+          <p>0</p>
+          <!--contador de tweets-->
+        </div>
+        <div>
+          <p>Siguiendo</p>
+          <p>19</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>Tendencias para ti <span>.cambiar</span></p>
+        </div>
+        <div>
+          <p>#tendencia</p>
+          <p>#texto</p>
+          <p>#parrafo1</p>
+          <p>#tendencia</p>
+          <p>#texto</p>
+          <p>#parrafo1</p>
+        </div>
+      </div>
+    </section>
+    <section id="section2">
+      <div id="tweet" class="container">
+        <textarea id="twiteear">
 
           </textarea>
-          <form class="buton">
-            <button type="button" name="button">
+        <form class="buton">
+          <button type="button" name="button">
               Tweet
             </button>
-          </form>
-        </div>
-        <div id="tweets" class="container twitter">
+        </form>
+      </div>
+      <div id="tweets" class="container twitter">
 
-        </div>
-      </section>
-      <section id="section3">
+      </div>
+    </section>
+    <section id="section3">
 
-      </section>
-    </main>
-    <script type="text/javascript" src="js/app.js"></script>
-  </body>
+    </section>
+  </main>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+
 </html>

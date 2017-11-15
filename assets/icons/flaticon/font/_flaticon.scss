@@ -1,0 +1,49 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 07/05/2017 19:49
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-add-user:before { content: "\f100"; }
+.flaticon-check:before { content: "\f101"; }
+.flaticon-feather-in-a-square:before { content: "\f102"; }
+.flaticon-music:before { content: "\f103"; }
+.flaticon-shape:before { content: "\f104"; }
+    
+    $font-Flaticon-add-user: "\f100";
+    $font-Flaticon-check: "\f101";
+    $font-Flaticon-feather-in-a-square: "\f102";
+    $font-Flaticon-music: "\f103";
+    $font-Flaticon-shape: "\f104";
