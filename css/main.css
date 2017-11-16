@@ -72,6 +72,12 @@ header .container {
   font-size: 14px;
 }
 
+.smaller {
+  font-family: 'Segoe UI';
+  font-weight: bolder;
+  font-size: 12px;
+}
+
 .home:hover {
   color: #4ab3f4;
   cursor: pointer;
@@ -87,6 +93,8 @@ header .container {
   width: 35px;
   height: 35px;
   float: left;
+  display: block;
+  margin: 5px;
 }
 
 .image-profil img {
@@ -126,16 +134,8 @@ header .container {
   float: right;
 }
 
-#section1 {
-  outline: 1px solid green;
-}
-
-#section2 {
-  outline: 1px solid blue;
-}
-
-#section3 {
-  outline: 1px solid red;
+.main{
+  clear: both;
 }
 
 .subcontainer-page {
@@ -145,13 +145,7 @@ header .container {
 
 }
 
-/*main
-.subcontainer-page {
-  width: 25%;
-
-}
-
-#section1 .portada, #section1 .tendences {
+#section1 .portada, #section1 .tendences{
   background-color: #fff;
 }
 
@@ -178,12 +172,6 @@ header .container {
  .image-portada img{
   width: 100%;
   height: 100px;
-
-}
-
-#section1 .image-portada .perfil img {
-  width: 76px;
-  height: 76px;
 }
 
 .info {
@@ -227,5 +215,30 @@ header .container {
 
 #section2 {
   width: 40%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-*/
+
+.post {
+  width: 100%;
+  background-color: #e8f5fd;
+  overflow: auto;
+}
+
+.post .search-header{
+  width: 87%;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow-x: hidden
+}
+
+.post .search-header input {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden
+}
+
+.followers {
+  background-color: #fff;
+  overflow: auto;
+}
