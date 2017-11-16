@@ -1,35 +1,40 @@
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 body {
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.71429;
-  font-family: sans-serif;
   background-color: #e6ecf0;
 }
 
-.container {
-  width: 95%;
-  margin: 0 2.5%;
-  overflow: hidden;
+span, input {
+  box-sizing: border-box;
 }
 
-div {
-  display: inline-block;
+.container {
+  width: 90%;
+  margin: 0 5%;
 }
 
 header {
   background-color: #fff;
+
+}
+header .container {
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #bcc3c7;
-  font-size: 12px;
+}
+.subcontainer {
+  width: 33%;
+  float: left;
+
 }
 
-.subcontainer {
-  width: 25%;
+.subcontainer.left div, .subcontainer.right div{
   display: inline-block;
-
 }
 
 .left {
@@ -40,45 +45,142 @@ header {
   float: right;
 }
 
-.image-header {
-  width: 35px;
-  height: 35px;
+.skyblue {
+  color: #4ab3f4;
+  font-weight: bold;
+
 }
 
-.image-header img {
-
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-}
-
-.text-gray {
+.gray {
   color: #66757f;
   font-weight: bold;
 }
 
-.subcontainer.left, .subcontainer.right {
-  margin-left: 8%;
-  margin-right: 2%;
+.small {
+  font-size: 13px;
 }
 
-.subcontainer.left .text-gray:hover {
+.home {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.home:hover {
   color: #4ab3f4;
   cursor: pointer;
+  transition: 0.7s;
 }
 
-.subcontainer.left .text-gray {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-
-.text-skyblue {
-  color:#4ab3f4;
-}
-
-.subcontainer.middle {
+.subcontainer.middle.skyblue {
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.image-profil {
+  width: 35px;
+  height: 35px;
+}
+
+.image-profil img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
+.button-tweet {
+  width: 70px;
+}
+
+.search-header {
+  width: 200px;
+  margin-top: 0;
+  border-radius: 40px;
+  border: 1px solid #c0c2c3;
+  height: 35px;
+}
+
+.search-header input {
+    border: none;
+}
+
+/*main*/
+.subcontainer-page {
+  width: 25%;
+
+}
+
+#section1 .portada, #section1 .tendences {
+  background-color: #fff;
+}
+#section1 .perfil {
+  width: 76px;
+  height: 76px;
+}
+
+#section1 .perfil img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  float: left;
+  margin-top: 20%;
+  margin-left: 2%;
+}
+#section1 .portada .image-portada  {
+  width: 100%;
+  position: relative;
+}
+
+ .image-portada img{
+  width: 300px;
+  height: 100px;
+
+}
+
+#section1 .image-portada .perfil img {
+  width: 76px;
+  height: 76px;
+}
+
+.info {
+  width: 60%;
+  height: 10%;
+  float: left;
+}
+
+.info p:first-child {
+  color: #000;
+  font-weight: bold;
+}
+
+.info p:first-child+p {
+  color: #66757f;
+}
+
+.tweets {
+  margin-left: 5%;
+  margin-right: 5px;
+}
+.tweets div {
+  float: left;
+  display: inline-block;
+  width: 30%;
+}
+
+.tendences {
+  margin-top: 10px;
+}
+
+.tendences div:first-child p {
+  color: #000;
+  font-weight: bold;
+}
+
+.tendences div:first-child span {
+  color: #4ab3f4;
+  font-size: 10px;
+}
+
+#section2 {
+  width: 40%;
 }
