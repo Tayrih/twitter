@@ -229,16 +229,41 @@ header .container {
   width: 87%;
   border-radius: 20px;
   background-color: #fff;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .post .search-header input {
-  width: 100%;
+  width: 95%;
   height: 100%;
-  overflow-x: hidden
+  outline: none;
+  background-color: inherit;
+}
+
+#tweets {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid blue;
+}
+
+#tweets a {
+  background-color: #4ab3f4;
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
 }
 
 .followers {
   background-color: #fff;
   overflow: auto;
+  padding: 10px;
+}
+
+.followers p.left:first-child {
+  color: #000;
+  font-weight: bold;
+}
+
+.followers p {
+  padding-left: 5px;
+  padding-right: 5px;
 }
