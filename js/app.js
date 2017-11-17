@@ -19,6 +19,6 @@ function createText() {
   buttonTweet.textContent = "Tweetear";
   buttonTweet.setAttribute('class','white right');
   box_tweet.appendChild(textTweet);
-  box_tweet.setAttribute('class', 'txta-input')
-  textContainer.appendChild(buttonTweet);
+  box_tweet.setAttribute('class', 'txta-input');
+  box_tweet.appendChild(buttonTweet);
 }
