@@ -45,7 +45,7 @@ function createText() {
     } else {
       buton[0].disabled = false;
 	    buton[0].style.backgroundColor = '#50b6f5';
-      //countTweets(event); funcion qque no funciona 
+      //countTweets(event); funcion qque no funciona
       resizeTextArea(event);
       buton[0].addEventListener('click', createTweets);
     }
@@ -57,8 +57,10 @@ function createTweets (event){
   console.log('holi');
     if(postTweet[0].value) {
         var p = document.createElement('p');
-        p.textContent = postTweet[0].value;
+        var spanTime = document.createElement('span');
         p.setAttribute('class','text-tweet');
+      // p.textContent = postTweet[0].value;
+        p.textContent = time() + '    ' + postTweet[0].value;
         textContainer.appendChild(p);
         postTweet[0].value = '';
     }
@@ -95,4 +97,20 @@ function resizeTextArea(event) {
 	} else {
 		postTweet[0].setAttribute('rows', 2);
 	}
+}
+
+function time() {
+	var date = new Date();
+	var hours = date.getHours();
+	var min = date.getMinutes();
+	var time;
+	if (min < 10) {
+		min = '0' + min;
+	}
+	if (hours >= 12 && hours <= 24) {
+		time = hours + ':' + min + ' pm: ';
+	} else {
+		time = hours + ':' + min + ' am: ';
+	}
+	return time;
 }
