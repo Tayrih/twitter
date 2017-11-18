@@ -20,21 +20,27 @@ function changeForText() {
 function createText() {
   var textTweet = document.createElement('textarea');
   var buttonTweet = document.createElement('button');
+
   textTweet.setAttribute('class','text-tweet');
   textTweet.setAttribute('value','text');
   buttonTweet.textContent = "Tweetear";
   buttonTweet.setAttribute('class','white right');
+
   boxTweet.appendChild(textTweet);
   boxTweet.setAttribute('class', 'txta-input');
   boxTweet.appendChild(buttonTweet);
-  buton[0].addEventListener('click', function () {
-    if ((postTweet[0].value) === 0) {
-      buton[0].disabled = true;
-    } else if((postTweet[0].value) === ""){
-      buton[0].disabled = true;
+
+  postTweet[0].addEventListener('keydown', function (event) {
+    if ((event.keyCode) === 32) {
+      buton.disabled = true;
+      buton.style.backgroundColor = '#000';
+      event.preventDefault();
     } else {
-      console.log("evento que crea los tweets");
+      btn.disabled = false;
+	    btn.style.backgroundColor = '#50b6f5';
+      buton[0].addEventListener('click', createTweets);
     }
+
   });
 }
 
