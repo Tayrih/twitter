@@ -260,6 +260,7 @@ header .container {
   padding-bottom: 5px;
   border-radius: 10px;
   display: block;
+  border: none;
 }
 
 .text-tweet {

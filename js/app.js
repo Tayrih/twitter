@@ -22,6 +22,7 @@ function createText() {
   var buttonTweet = document.createElement('button');
 
   textTweet.setAttribute('class','text-tweet');
+  textTweet.setAttribute('placeholder','¿Qué está pasando?');
   textTweet.setAttribute('value','text');
   buttonTweet.textContent = "Tweetear";
   buttonTweet.setAttribute('class','white right');
@@ -30,14 +31,20 @@ function createText() {
   boxTweet.setAttribute('class', 'txta-input');
   boxTweet.appendChild(buttonTweet);
 
+  postTweet[0].addEventListener('click', function (event) {
+
+      buton[0].disabled = true;
+      buton[0].style.backgroundColor = '#b8e1fa';
+
+  });
   postTweet[0].addEventListener('keydown', function (event) {
     if ((event.keyCode) === 32) {
-      buton.disabled = true;
-      buton.style.backgroundColor = '#000';
-      event.preventDefault();
+      buton[0].disabled = true;
+      buton[0].style.backgroundColor = '#b8e1fa';
+
     } else {
-      btn.disabled = false;
-	    btn.style.backgroundColor = '#50b6f5';
+      buton[0].disabled = false;
+	    buton[0].style.backgroundColor = '#50b6f5';
       buton[0].addEventListener('click', createTweets);
     }
 
@@ -45,7 +52,7 @@ function createText() {
 }
 
 // evento para crear  tweets y agregarlos al html
-function createTweets (){
+function createTweets (event){
   console.log('holi');
     if(postTweet[0].value) {
         var p = document.createElement('p');
