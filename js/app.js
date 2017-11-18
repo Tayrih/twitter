@@ -21,16 +21,25 @@ function createText() {
   var textTweet = document.createElement('textarea');
   var buttonTweet = document.createElement('button');
   textTweet.setAttribute('class','text-tweet');
+  textTweet.setAttribute('value','text');
   buttonTweet.textContent = "Tweetear";
   buttonTweet.setAttribute('class','white right');
   boxTweet.appendChild(textTweet);
   boxTweet.setAttribute('class', 'txta-input');
   boxTweet.appendChild(buttonTweet);
-  buton[0].addEventListener('click', createTweets);
+  buton[0].addEventListener('click', function () {
+    if ((postTweet[0].value) === 0) {
+      buton[0].disabled = true;
+    } else if((postTweet[0].value) === ""){
+      buton[0].disabled = true;
+    } else {
+      console.log("evento que crea los tweets");
+    }
+  });
 }
 
-// evento para los tweets
-function createTweets (event){
+// evento para crear  tweets y agregarlos al html
+function createTweets (){
   console.log('holi');
     if(postTweet[0].value) {
         var p = document.createElement('p');
