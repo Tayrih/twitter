@@ -2,8 +2,8 @@
 ## Del proyecto:
 
 > Para este proyecto se nos pide replicar la funcionalidad de Twitter, con respecto a las publicaciones, se nos brindó una lista de versiones para que sean nuestra guía, este proyecto cuenta con las siguientes versiones, adicionalmente el proyecto al inicio muestra un input, al evento click cambia por un textarea:
-![Sin titulo](assets/docs/img2.png)
-![Sin titulo](assets/docs/img3.png)
+![img--input](assets/docs/img2.png)
+![img-textarea](assets/docs/img3.png)
 
 * Versión 0.0.1
 
@@ -29,4 +29,4 @@
     Agregar la hora en que se publicó el tweet. En el formato de 24 horas: hh:mm.
 
 El resultado es:
-![Sin titulo](assets/docs/img1.png)
+![Final](assets/docs/img1.png)
