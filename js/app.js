@@ -35,6 +35,10 @@ function createText() {
   buton[0].style.backgroundColor = '#b8e1fa';
   postTweet[0].focus();
 
+  var span = document.createElement('span');
+  span.setAttribute('id', 'count');
+  boxTweet.appendChild(span);
+
 // evento para verificar que no se ingrese texto vacio, anida una funcion vacia
   postTweet[0].addEventListener('keyup', function (event) {
      if (postTweet[0].value.substr(0,1) === " ") { // LEEMOS SI LO QUE PRESIONO AL INICIO ES UN ESPACIO
@@ -45,7 +49,7 @@ function createText() {
     } else {
       buton[0].disabled = false;
 	    buton[0].style.backgroundColor = '#50b6f5';
-      //countTweets(event); funcion qque no funciona
+      countTweets(event);
       resizeTextArea(event);
       buton[0].addEventListener('click', createTweets);
     }
@@ -54,7 +58,6 @@ function createText() {
 
 // evento para crear  tweets y agregarlos al html
 function createTweets (event){
-  console.log('holi');
     if(postTweet[0].value) {
         var p = document.createElement('p');
         var spanTime = document.createElement('span');
@@ -70,22 +73,21 @@ function createTweets (event){
 function countTweets(event) {
 
 	var count = postTweet[0].value.length;
-  var span = document.createElement('span');
-	var show = 140 - count;
-	span.textContent = show;
-  boxTweet.appendChild(span);
+	var show = 140 - count*1;
+	var contador = document.getElementById('count');
+  contador.textContent = show;
 	if (count > 0 && count < 119) {
-		span.style.color = '#50b6f5';
+		contador.style.color = '#50b6f5';
 	} else if (count >= 120 && count <= 130) {
-		span.style.color = "#f7b101";
+		contador.style.color = "#f7b101";
 	} else if (count > 130 && count <= 140) {
-		span.style.color = "#d70908";
+		contador.style.color = "#d70908";
 	} else {
     buton[0].disabled = true;
     buton[0].style.backgroundColor = '#b8e1fa';
 	}
 }
-
+// funcion que redimenciona el text area al presionar enter
 function resizeTextArea(event) {
 	var colsIn = postTweet[0].getAttribute('cols');
 	var rowsIn = postTweet[0].getAttribute('rows');
@@ -98,7 +100,7 @@ function resizeTextArea(event) {
 		postTweet[0].setAttribute('rows', 2);
 	}
 }
-
+// funcion para obtener la hora
 function time() {
 	var date = new Date();
 	var hours = date.getHours();
@@ -107,8 +109,10 @@ function time() {
 	if (min < 10) {
 		min = '0' + min;
 	}
-	if (hours >= 12 && hours <= 24) {
-		time = hours + ':' + min + ' pm: ';
+	if (hours > 12 && hours <= 24) {
+		time = hours-12 + ':' + min + ' pm: ';
+	} else if (hours == 12) {
+	  time = hours + ':' + min + ' m: ';
 	} else {
 		time = hours + ':' + min + ' am: ';
 	}
